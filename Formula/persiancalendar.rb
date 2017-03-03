@@ -9,7 +9,7 @@ class Persiancalendar < Formula
     cp "persiancalendar.swift", "#{prefix}"
   end
 
-  plist_options :startup => false
+  plist_options :startup => true
 
   def plist; <<-EOS.undent
     <?xml version="1.0" encoding="UTF-8"?>
