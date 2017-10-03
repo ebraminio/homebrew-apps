@@ -1,9 +1,9 @@
-class Persiancalendar < Formula
+class PersianCalendar < Formula
   desc "Persian Calendar"
   homepage "https://gist.github.com/ebraminio/72034ef7b9cc7bc54aee1cfa07e152da"
-  url "https://gist.githubusercontent.com/ebraminio/72034ef7b9cc7bc54aee1cfa07e152da/raw/eec2bd38ad80292df43492a4550ba447e441c697/PersianCalendar.swift"
-  version "0.1"
-  sha256 "0f079ca24755d5a4db8e9d123ed9864edaa35d5f12ce8d6c6171397c119692ab"
+  url "https://gist.githubusercontent.com/ebraminio/72034ef7b9cc7bc54aee1cfa07e152da/raw/7d4a634ebc5fe5266faad76207b4acbdceb4d68a/PersianCalendar.swift"
+  version "0.1.1"
+  sha256 "211e1ef4f83e7691022c3c1b8db1e09e5430d3eb2af67f2c098728f8d40b4859"
 
   def install
     cp "persiancalendar.swift", "#{prefix}"
