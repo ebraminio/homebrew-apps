@@ -2,11 +2,11 @@ class PersianCalendar < Formula
   desc "Persian Calendar"
   homepage "https://github.com/ebraminio/homebrew-apps"
   url "https://raw.githubusercontent.com/ebraminio/homebrew-apps/master/PersianCalendar.swift"
-  version "0.2.2"
-  sha256 "157c34fb1f52b9bf310a8dd75008c4ca6a57bc460ba613093f6d7f88796a2fd4"
+  version "0.2.3"
+  sha256 "f872ab697e0b6ed28ab285e2babb2513fcf51b94df3b981eb6b5533bb160ca2f"
 
   def install
-    exec "/usr/bin/swiftc", "persiancalendar.swift", "-o", "#{opt_prefix}/persiancalendar"
+    system "/usr/bin/swiftc", "persiancalendar.swift", "-o", "#{prefix}/persiancalendar"
   end
 
   service do

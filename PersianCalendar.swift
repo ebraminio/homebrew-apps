@@ -18,7 +18,7 @@ let titleDateFormatter = DateFormatter()
 titleDateFormatter.locale = Locale(identifier: "fa")
 titleDateFormatter.dateFormat = "d"
 
-class Utils {
+final class Utils {
     @objc func copyToClipboard(_ sender: NSMenuItem) {
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(sender.title, forType: .string)
@@ -45,11 +45,11 @@ menu.addItem(gregorianDateMenuItem)
 // update
 Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { timer in
     let date = Date()
-    statusItem.toolTip = persianDateFormatter.string(from: date)
+    statusItem.button?.toolTip = persianDateFormatter.string(from: date)
     persianDateMenuItem.title = persianDateFormatter.string(from: date)
     arabicDateMenuItem.title = arabicDateFormatter.string(from: date)
     gregorianDateMenuItem.title = gregorianDateFormatter.string(from: date)
-    statusItem.title = titleDateFormatter.string(from: date)
+    statusItem.button?.title = titleDateFormatter.string(from: date)
 }.fire()
 
 menu.addItem(NSMenuItem.separator())
